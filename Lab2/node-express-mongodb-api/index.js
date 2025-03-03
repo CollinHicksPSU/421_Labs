@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://admin:password@cluster0.lv5o6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://admin:admin@cluster0.lv5o6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -20,7 +20,7 @@ db.once('open', () => {
 });
 
 // Routes
-const itemsRouter = require('./routes/items');
+const itemsRouter = require('./routes/items.js');
 app.use('/items', itemsRouter);
 
 // Start the server
