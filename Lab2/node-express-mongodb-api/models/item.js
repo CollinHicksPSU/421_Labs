@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  description: { type: String }
+  name: { type: String},
+  itemDescription: { type: String }
 });
 
 const Item = mongoose.model('Item', itemSchema);
